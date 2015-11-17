@@ -1,0 +1,31 @@
+Mon Nov 16 22:02:46 EST 2015 : Apache Derby Network Server - 10.8.3.0 - (1405108) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Mon Nov 16 22:03:13 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance a816c00e-0151-1365-01bc-00004bea1b38 
+on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB  with class loader sun.misc.Launcher$AppClassLoader@749cd006 
+Loaded from file:/C:/Program%20Files/Java/jdk1.7.0_51/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_51-b13
+user.dir=C:\Program Files\Java\jdk1.7.0_51\db
+os.name=Windows 8
+os.arch=amd64
+os.version=6.2
+derby.system.home=C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Nov 16 22:03:21 EST 2015:
+Shutting down instance a816c00e-0151-1365-01bc-00004bea1b38 on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB with class loader sun.misc.Launcher$AppClassLoader@749cd006 
+Mon Nov 16 22:03:21 EST 2015 Thread[DRDAConnThread_4,5,main] (DATABASE = HW3DB), (DRDAID = {2}), Database 'HW3DB' shutdown.
+----------------------------------------------------------------
+Mon Nov 16 22:03:27 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance 23ce809c-0151-1365-01bc-00004bea1b38 
+on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB  with class loader sun.misc.Launcher$AppClassLoader@749cd006 
+Loaded from file:/C:/Program%20Files/Java/jdk1.7.0_51/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_51-b13
+user.dir=C:\Program Files\Java\jdk1.7.0_51\db
+os.name=Windows 8
+os.arch=amd64
+os.version=6.2
+derby.system.home=C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex
+Database Class Loader started - derby.database.classpath=''
