@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewBoardgamesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewBoardgamesLabel_id}"/>
+                    <h:outputText value="#{boardgamesController.selected.id}" title="#{bundle.ViewBoardgamesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewBoardgamesLabel_name}"/>
+                    <h:outputText value="#{boardgamesController.selected.name}" title="#{bundle.ViewBoardgamesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewBoardgamesLabel_minplayers}"/>
+                    <h:outputText value="#{boardgamesController.selected.minplayers}" title="#{bundle.ViewBoardgamesTitle_minplayers}"/>
+                    <h:outputText value="#{bundle.ViewBoardgamesLabel_maxplayers}"/>
+                    <h:outputText value="#{boardgamesController.selected.maxplayers}" title="#{bundle.ViewBoardgamesTitle_maxplayers}"/>
+                    <h:outputText value="#{bundle.ViewBoardgamesLabel_publisher}"/>
+                    <h:outputText value="#{boardgamesController.selected.publisher}" title="#{bundle.ViewBoardgamesTitle_publisher}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{boardgamesController.destroyAndView}" value="#{bundle.ViewBoardgamesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewBoardgamesEditLink}"/>
+                <br />
+                <h:commandLink action="#{boardgamesController.prepareCreate}" value="#{bundle.ViewBoardgamesCreateLink}" />
+                <br />
+                <h:commandLink action="#{boardgamesController.prepareList}" value="#{bundle.ViewBoardgamesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewBoardgamesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
