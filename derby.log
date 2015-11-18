@@ -1,14 +1,14 @@
-Wed Nov 18 15:48:57 EST 2015 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+Wed Nov 18 16:46:30 EST 2015 : Apache Derby Network Server - 10.8.3.0 - (1405108) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Wed Nov 18 15:48:57 EST 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0151-1c5b-6d45-ffffdf259a4d 
-on database directory C:\Users\Patryk\Documents\GitHub\BoardGameIndex\HW3DB with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_60/db/lib/derby.jar
+Wed Nov 18 16:46:31 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance a816c00e-0151-1c90-2be5-00004bea1b38 
+on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB  with class loader sun.misc.Launcher$AppClassLoader@749cd006 
+Loaded from file:/C:/Program%20Files/Java/jdk1.7.0_51/db/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_60-b27
-user.dir=C:\Program Files\Java\jdk1.8.0_60\db
-os.name=Windows 10
+java.runtime.version=1.7.0_51-b13
+user.dir=C:\Program Files\Java\jdk1.7.0_51\db
+os.name=Windows 8
 os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Users\Patryk\Documents\GitHub\BoardGameIndex
+os.version=6.2
+derby.system.home=C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex
 Database Class Loader started - derby.database.classpath=''
