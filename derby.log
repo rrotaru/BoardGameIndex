@@ -1,31 +1,65 @@
-Mon Nov 16 22:02:46 EST 2015 : Apache Derby Network Server - 10.8.3.0 - (1405108) started and ready to accept connections on port 1527
+Tue Nov 17 20:55:05 EST 2015 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Mon Nov 16 22:03:13 EST 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance a816c00e-0151-1365-01bc-00004bea1b38 
-on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB  with class loader sun.misc.Launcher$AppClassLoader@749cd006 
-Loaded from file:/C:/Program%20Files/Java/jdk1.7.0_51/db/lib/derby.jar
+Tue Nov 17 20:55:05 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0151-184d-691d-ffffa1fbb23f 
+on database directory /Users/robertrotaru/NetBeansProjects/BoardGameIndex/HW3DB with class loader sun.misc.Launcher$AppClassLoader@266474c2 
+Loaded from file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.7.0_51-b13
-user.dir=C:\Program Files\Java\jdk1.7.0_51\db
-os.name=Windows 8
-os.arch=amd64
-os.version=6.2
-derby.system.home=C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex
+java.runtime.version=1.8.0_60-b27
+user.dir=/Applications/NetBeans/glassfish-4.1/javadb
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.1
+derby.system.home=/Users/robertrotaru/NetBeansProjects/BoardGameIndex
 Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Mon Nov 16 22:03:21 EST 2015:
-Shutting down instance a816c00e-0151-1365-01bc-00004bea1b38 on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB with class loader sun.misc.Launcher$AppClassLoader@749cd006 
-Mon Nov 16 22:03:21 EST 2015 Thread[DRDAConnThread_4,5,main] (DATABASE = HW3DB), (DRDAID = {2}), Database 'HW3DB' shutdown.
-----------------------------------------------------------------
-Mon Nov 16 22:03:27 EST 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance 23ce809c-0151-1365-01bc-00004bea1b38 
-on database directory C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex\HW3DB  with class loader sun.misc.Launcher$AppClassLoader@749cd006 
-Loaded from file:/C:/Program%20Files/Java/jdk1.7.0_51/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.7.0_51-b13
-user.dir=C:\Program Files\Java\jdk1.7.0_51\db
-os.name=Windows 8
-os.arch=amd64
-os.version=6.2
-derby.system.home=C:\Users\Anthony\Documents\ccsu\web_programming\final_project\git\BoardGameIndex
-Database Class Loader started - derby.database.classpath=''
+Tue Nov 17 20:55:06 EST 2015 Thread[DRDAConnThread_2,5,main] (XID = 444), (SESSIONID = 0), (DATABASE = HW3DB), (DRDAID = {1}), Cleanup action starting
+java.sql.SQLNonTransientConnectionException: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: java.sql.SQLException: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 19 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Tue Nov 17 20:55:06 EST 2015 Thread[DRDAConnThread_2,5,main] (DATABASE = HW3DB), (DRDAID = {1}), Connection authentication failure occurred.  Reason: Invalid authentication..
