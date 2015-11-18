@@ -36,7 +36,7 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>faces/index.xhtml</welcome-file>
-        <welcome-file>redirect.jsp</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
     <resource-ref>
         <res-ref-name>jdbc/HW3DB</res-ref-name>
