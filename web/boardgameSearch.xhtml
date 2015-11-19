@@ -4,7 +4,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Search Boardgames</title>
     </h:head>
     <h:body>
         <h:form>
@@ -23,16 +23,23 @@
 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Min Players"/>
+                        <h:outputText value="Link"/>
                     </f:facet> 
-                    <h:outputText value="#{item.minPlayers}"></h:outputText>
+                    <h:outputText value="#{item.link}"></h:outputText>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="MaxPlayers"/>
+                        <h:outputText value="Designer"/>
                     </f:facet> 
-                    <h:outputText value="#{item.maxPlayers}"></h:outputText>
+                    <h:outputText value="#{item.designer}"></h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Artist"/>
+                    </f:facet> 
+                    <h:outputText value="#{item.artist}"></h:outputText>
                 </h:column>
                 
                 <h:column>
@@ -40,6 +47,41 @@
                         <h:outputText value="Publisher"/>
                     </f:facet> 
                     <h:outputText value="#{item.publisher}"></h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Year Published"/>
+                    </f:facet> 
+                    <h:outputText value="#{item.yearPublished}"></h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Players"/>
+                    </f:facet> 
+                    <h:outputText value="#{item.players}"></h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Ages"/>
+                    </f:facet> 
+                    <h:outputText value="#{item.ages}"></h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="PlayingTime"/>
+                    </f:facet> 
+                    <h:outputText value="#{item.playingTime}"></h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Category"/>
+                    </f:facet> 
+                    <h:outputText value="#{item.category}"></h:outputText>
                 </h:column>
             </h:dataTable>
         </h:form>

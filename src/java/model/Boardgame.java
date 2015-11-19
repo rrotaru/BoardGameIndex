@@ -8,6 +8,7 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -22,8 +23,14 @@ public class Boardgame implements Serializable {
     @GeneratedValue
     private Long id;
     private String name;
-    private Integer minPlayers;
-    private Integer maxPlayers;
+    private String link;
+    private String designer;
+    private String artist;
+    private String yearpublished;
+    private String players;
+    private String ages;
+    private String playingtime;
+    private String category;
     private String publisher;
 
     /**
@@ -33,45 +40,129 @@ public class Boardgame implements Serializable {
     }
 
     /**
-     * @return the Name
+     * @return the name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name the Name to set
+     * @param name the name to set
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return the MinPlayers
+     * @return the link
      */
-    public Integer getMinPlayers() {
-        return minPlayers;
+    public String getLink() {
+        return link;
     }
 
     /**
-     * @param minPlayers the MinPlayers to set
+     * @param link the link to set
      */
-    public void setLastName(Integer minPlayers) {
-        this.minPlayers = minPlayers;
+    public void setLink(String link) {
+        this.link = link;
+    }
+    
+    /**
+     * @return the designer
+     */
+    public String getDesigner() {
+        return designer;
     }
 
     /**
-     * @return the MaxPlayers
+     * @param designer the designer to set
      */
-    public Integer getMaxPlayers() {
-        return maxPlayers;
+    public void setDesigner(String designer) {
+        this.designer = designer;
     }
 
     /**
-     * @param maxPlayers the MaxPlayers to set
+     * @return the artist
      */
-    public void setMaxPlayers(Integer maxPlayers) {
-        this.maxPlayers = maxPlayers;
+    public String getArtist() {
+        return artist;
+    }
+
+    /**
+     * @param artist the artist to set
+     */
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+    
+    /**
+     * @return the year
+     */
+    public String getYearPublished() {
+        return yearpublished;
+    }
+
+    /**
+     * @param year the year to set
+     */
+    public void setYearPublished(String yearpublished) {
+        this.yearpublished = yearpublished;
+    }
+
+        /**
+     * @return the players
+     */
+    public String getPlayers() {
+        return players;
+    }
+
+    /**
+     * @param players the players to set
+     */
+    public void setPlayers(String players) {
+        this.players = players;
+    }
+
+        /**
+     * @return the ages
+     */
+    public String getAges() {
+        return ages;
+    }
+
+    /**
+     * @param ages the ages to set
+     */
+    public void setAges(String ages) {
+        this.ages = ages;
+    }
+
+        /**
+     * @return the playingtime
+     */
+    public String getPlayingTime() {
+        return playingtime;
+    }
+
+    /**
+     * @param playingtime the playingtime to set
+     */
+    public void setPlayingTime(String playingtime) {
+        this.playingtime = playingtime;
+    }
+
+        /**
+     * @return the category
+     */
+    public String getCategory() {
+        return category;
+    }
+
+    /**
+     * @param category the category to set
+     */
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     /**

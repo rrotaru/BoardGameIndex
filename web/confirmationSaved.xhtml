@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Boardgame data entered</title>
+    </h:head>
+    <h:body>
+        <h:outputStylesheet library="css" name="styles.css"/>
+        <h1>Information saved successfully</h1>
+        <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
+            <h:outputText value="Name:"></h:outputText>
+            <h:outputText value="#{boardgame.name}"></h:outputText>
+            <h:outputText value="Link:"></h:outputText>
+            <h:outputText value="#{boardgame.link}"></h:outputText>
+            <h:outputText value="Designer:"></h:outputText>
+            <h:outputText value="#{boardgame.designer}"></h:outputText>
+            <h:outputText value="Artist:"></h:outputText>
+            <h:outputText value="#{boardgame.artist}"></h:outputText>
+            <h:outputText value="Publisher:"></h:outputText>
+            <h:outputText value="#{boardgame.publisher}"></h:outputText>
+            <h:outputText value="Year Published:"></h:outputText>
+            <h:outputText value="#{boardgame.yearPublished}"></h:outputText>
+            <h:outputText value="Players:"></h:outputText>
+            <h:outputText value="#{boardgame.players}"></h:outputText>
+            <h:outputText value="Ages:"></h:outputText>
+            <h:outputText value="#{boardgame.ages}"></h:outputText>
+            <h:outputText value="Playing Time:"></h:outputText>
+            <h:outputText value="#{boardgame.playingTime}"></h:outputText>
+            <h:outputText value="Category:"></h:outputText>
+            <h:outputText value="#{boardgame.category}"></h:outputText>
+            
+        </h:panelGrid>
+    </h:body>
+</html>
+

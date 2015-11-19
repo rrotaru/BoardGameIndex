@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Add a Boardgame</title>
+    </h:head>
+    <h:body>
+        <h:outputStylesheet library="css" name="styles.css"/>
+        <h:messages style="color:red;font-weight:bold;"></h:messages>
+        <h:form>
+
+            <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
+                <h:outputText value="Name"></h:outputText>
+                <h:inputText label="Name" value="#{boardgame.name}" required="true">
+                    <f:validateLength minimum="2" maximum="255"></f:validateLength>
+                </h:inputText>
+                <h:outputText value="Link"></h:outputText>
+                <h:inputText label="Link" value="#{boardgame.link}" required="true">
+                    <f:validateLength minimum="2" maximum="255"></f:validateLength>
+                </h:inputText>
+                <h:outputText value="Designer"></h:outputText>
+                <h:inputText label="Designer" value="#{boardgame.designer}" >
+                    <f:validateLength minimum="2" maximum="255"></f:validateLength>
+                </h:inputText>
+                <h:outputText value="Artist"></h:outputText>
+                <h:inputText label="Artist" value="#{boardgame.artist}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:outputText value="Publisher"></h:outputText>
+                <h:inputText label="Publisher" value="#{boardgame.publisher}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:outputText value="Year Published"></h:outputText>
+                <h:inputText label="Year Published" value="#{boardgame.yearPublished}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:outputText value="Players"></h:outputText>
+                <h:inputText label="Players" value="#{boardgame.players}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:outputText value="Ages"></h:outputText>
+                <h:inputText label="Ages" value="#{boardgame.ages}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:outputText value="Playing Time"></h:outputText>
+                <h:inputText label="Playing Time" value="#{boardgame.playingTime}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:outputText value="Category"></h:outputText>
+                <h:inputText label="Category" value="#{boardgame.category}">
+                    <f:validateLength minimum="2" maximum="255" />
+                </h:inputText>
+                <h:panelGroup></h:panelGroup>
+                <h:commandButton action="#{boardgameController.saveBoardgame}" value="Save"></h:commandButton>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
