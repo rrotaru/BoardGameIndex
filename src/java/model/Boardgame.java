@@ -5,11 +5,14 @@
 package model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -32,6 +35,9 @@ public class Boardgame implements Serializable {
     private String playingtime;
     private String category;
     private String publisher;
+    
+    @OneToMany(mappedBy="boardgame",fetch=FetchType.EAGER)
+    private List<Image> images;
 
     /**
      * Creates a new instance of Boardgame
@@ -178,7 +184,20 @@ public class Boardgame implements Serializable {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
+    
+    /**
+     * @return the images
+     */
+    public List<Image> getImages() {
+        return images;
+    }
 
+    /**
+     * @param images the images to set
+     */
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
     /**
      * @return the id
      */

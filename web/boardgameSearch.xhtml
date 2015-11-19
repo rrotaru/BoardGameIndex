@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>Search Boardgames</title>
     </h:head>
@@ -15,6 +16,12 @@
             <br/>
             <h:dataTable id="datatable" value="#{boardgameController.matchingBoardgames}" var="item" border="3" cellpadding="2" cellspacing="2">
                 <h:column>
+                    <ui:repeat value="#{item.images}" var="image">  
+                        <h:graphicImage value="#{image.url}" width="50" height="50" />
+                    </ui:repeat>
+                </h:column>
+                
+                <h:column>
                     <f:facet name="header">
                         <h:outputText value="Name" />
                     </f:facet> 
@@ -25,7 +32,7 @@
                     <f:facet name="header">
                         <h:outputText value="Link"/>
                     </f:facet> 
-                    <h:outputText value="#{item.link}"></h:outputText>
+                    <h:outputLink value="#{item.link}"><span>Purchase</span></h:outputLink>
                 </h:column>
 
                 <h:column>
