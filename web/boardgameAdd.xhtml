@@ -18,7 +18,7 @@
                 </h:inputText>
                 <h:outputText value="Link"></h:outputText>
                 <h:inputText label="Link" value="#{boardgame.link}" required="true">
-                    <f:validateLength minimum="2" maximum="255"></f:validateLength>
+                    <f:validator validatorId="urlValidator" />
                 </h:inputText>
                 <h:outputText value="Designer"></h:outputText>
                 <h:inputText label="Designer" value="#{boardgame.designer}" >
