@@ -6,6 +6,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>Search Boardgames</title>
+        <h:outputStylesheet name="css/styles.css" />
     </h:head>
     <h:body>
         <h:form>
@@ -14,7 +15,7 @@
                 <f:ajax event="keyup" render="datatable"/>
             </h:inputText>
             <br/>
-            <h:dataTable id="datatable" value="#{boardgameController.matchingBoardgames}" var="item" border="3" cellpadding="2" cellspacing="2">
+            <h:dataTable id="datatable" value="#{boardgameController.matchingBoardgames}" var="item" rowClasses="gray,white" border="3" cellpadding="2" cellspacing="2">
                 <h:column>
                     <ui:repeat value="#{item.images}" var="image">  
                         <h:graphicImage value="#{image.url}" width="50" height="50" />

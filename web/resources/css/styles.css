@@ -8,6 +8,23 @@ and open the template in the editor.
     Author     : robertrotaru
 */
 
+table, th, tr, td {
+    border: none;
+    padding: 0 15px 0 0;
+    border-spacing: 0;
+}
+
+th {
+    font-family: sans-serif;
+}
+.gray {
+    background-color: #ddd;
+}
+
+.white {
+    background-color: #fff;
+}
+
 .leftAlign{
     text-align:left;
 }
