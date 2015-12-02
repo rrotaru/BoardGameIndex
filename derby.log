@@ -1,7 +1,7 @@
-Fri Nov 20 09:03:45 EST 2015 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
+Fri Nov 20 13:48:39 EST 2015 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Fri Nov 20 09:03:46 EST 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0151-2535-3f98-ffffa1fbb23f 
+Fri Nov 20 13:48:44 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0151-263a-0c2d-ffffa1fbb23f 
 on database directory /Users/robertrotaru/NetBeansProjects/BoardGameIndex/HW3DB with class loader sun.misc.Launcher$AppClassLoader@266474c2 
 Loaded from file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -13,8 +13,8 @@ os.version=10.11.1
 derby.system.home=/Users/robertrotaru/NetBeansProjects/BoardGameIndex
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Fri Nov 20 09:37:18 EST 2015: Shutting down Derby engine
+Fri Nov 20 13:51:55 EST 2015: Shutting down Derby engine
 ----------------------------------------------------------------
-Fri Nov 20 09:37:18 EST 2015:
-Shutting down instance a816c00e-0151-2535-3f98-ffffa1fbb23f on database directory /Users/robertrotaru/NetBeansProjects/BoardGameIndex/HW3DB with class loader sun.misc.Launcher$AppClassLoader@266474c2 
+Fri Nov 20 13:51:55 EST 2015:
+Shutting down instance a816c00e-0151-263a-0c2d-ffffa1fbb23f on database directory /Users/robertrotaru/NetBeansProjects/BoardGameIndex/HW3DB with class loader sun.misc.Launcher$AppClassLoader@266474c2 
 ----------------------------------------------------------------
