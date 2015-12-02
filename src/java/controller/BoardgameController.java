@@ -7,6 +7,8 @@ package controller;
 import model.Boardgame;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -23,7 +25,7 @@ import model.Image;
  */
 @ManagedBean
 public class BoardgameController {
-
+    
     @PersistenceUnit(unitName = "BoardGameIndex2PU")
     private EntityManagerFactory entityManagerFactory;
     @Resource
@@ -72,5 +74,22 @@ public class BoardgameController {
      */
     public void setBoardgame(Boardgame boardgame) {
         this.boardgame = boardgame;
+    }
+    
+    public String deleteBoardgame(Integer id) {
+        System.out.println("#################" + id.toString());
+        String returnValue = "error";
+        try {
+            EntityManager em = entityManagerFactory.createEntityManager();
+            em.getTransaction().begin();
+            Boardgame boardgame = em.find(Boardgame.class, id);
+            em.remove(boardgame);
+            em.getTransaction().commit();
+            em.close();
+            returnValue = "confirmationDeleted";
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return returnValue;
     }
 }
