@@ -10,6 +10,19 @@
         <h:outputStylesheet library="css" name="styles.css"/>
         <h:messages style="color:red;font-weight:bold;"></h:messages>
         <h:form>
+            <f:metadata>
+                <f:viewParam name="id" value="#{boardgame.id}"/>
+                <f:viewParam name="name" value="#{boardgame.name}"/>
+                <f:viewParam name="link" value="#{boardgame.link}"/>
+                <f:viewParam name="designer" value="#{boardgame.designer}"/>
+                <f:viewParam name="artist" value="#{boardgame.artist}"/>
+                <f:viewParam name="publisher" value="#{boardgame.publisher}"/>
+                <f:viewParam name="yearPublished" value="#{boardgame.yearPublished}"/>
+                <f:viewParam name="players" value="#{boardgame.players}"/>
+                <f:viewParam name="ages" value="#{boardgame.ages}"/>
+                <f:viewParam name="playingTime" value="#{boardgame.playingTime}"/>
+                <f:viewParam name="category" value="#{boardgame.category}"/>
+            </f:metadata>
             <h:head>Enter a new boardgame</h:head>
             <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
                 <h:outputText value="Name"></h:outputText>
@@ -54,6 +67,7 @@
                 </h:inputText>
                 <h:panelGroup></h:panelGroup>
                 <h:commandButton action="#{boardgameController.saveBoardgame}" value="Save"></h:commandButton>
+                <h:commandButton action="#{boardgameController.deleteBoardgame}" value="Delete"></h:commandButton>
             </h:panelGrid>
         </h:form>
     </h:body>
