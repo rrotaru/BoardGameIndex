@@ -91,6 +91,16 @@
                     </f:facet> 
                     <h:outputText value="#{item.category}"></h:outputText>
                 </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Actions"/>
+                    </f:facet> 
+                    <h:form>
+                        <h:commandButton value="Update"></h:commandButton>
+                        <h:commandButton action="#{boardgameController.deleteBoardgame(item.id)}" value="Delete"></h:commandButton>
+                    </h:form>
+                </h:column>
             </h:dataTable>
         </h:form>
     </h:body>
