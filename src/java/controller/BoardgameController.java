@@ -89,8 +89,8 @@ public class BoardgameController {
         System.out.println("################# " + boardgame.getId() + boardgame.getName());
         String returnValue = "error";
         try {
-            EntityManager em = entityManagerFactory.createEntityManager();
             userTransaction.begin();
+            EntityManager em = entityManagerFactory.createEntityManager();
             Boardgame b = em.find(Boardgame.class, boardgame.getId());
             // some guy's crazy hack //b = b.getImages().get(0).getBoardgame();
             setBoardgame(b);
