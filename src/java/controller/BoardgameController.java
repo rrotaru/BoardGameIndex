@@ -35,6 +35,14 @@ public class BoardgameController {
     private ParamData paramData;
 
     public String saveBoardgame() {
+        if (boardgame.getId() == null) {
+            return createBoardgame();
+        } else {
+            return updateBoardgame();
+        }
+    }
+    
+    public String createBoardgame() {
         String returnValue = "error";
         try {
             userTransaction.begin();
@@ -49,13 +57,32 @@ public class BoardgameController {
         return returnValue;
     }
     
-    public String createBoardgame() {
-        return "";
-        
-    }
-    
     public String updateBoardgame() {
-        return "";
+        String returnValue = "error";
+        try {
+            userTransaction.begin();
+            EntityManager em = entityManagerFactory.createEntityManager();
+            Boardgame b = em.find(Boardgame.class, boardgame.getId());
+            // Is there a better way to do the code below? like a merge entities method?
+            b.setName(boardgame.getName());
+            b.setLink(boardgame.getLink());
+            b.setDesigner(boardgame.getDesigner());
+            b.setArtist(boardgame.getArtist());
+            b.setPublisher(boardgame.getPublisher());
+            b.setYearPublished(boardgame.getYearPublished());
+            b.setPlayers(boardgame.getPlayers());
+            b.setAges(boardgame.getAges());
+            b.setPlayingTime(boardgame.getPlayingTime());
+            b.setCategory(boardgame.getCategory());
+            setBoardgame(b);
+            em.persist(boardgame);
+            userTransaction.commit();
+            em.close();
+            returnValue = "confirmationSaved";
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return returnValue;
     }
     
     public String deleteBoardgame() {
@@ -65,6 +92,7 @@ public class BoardgameController {
             EntityManager em = entityManagerFactory.createEntityManager();
             userTransaction.begin();
             Boardgame b = em.find(Boardgame.class, boardgame.getId());
+            // some guy's crazy hack //b = b.getImages().get(0).getBoardgame();
             setBoardgame(b);
             em.remove(boardgame);
             userTransaction.commit();
